@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim include="Nasal/views.xml">
+ 
+    <author>BARANGER Emmanuel (3D)</author>
+    <aircraft-version>0.1</aircraft-version>
+    <status>Alpha</status>
+   
+    <fuel-fraction>0.8</fuel-fraction>
+  
+    <startup>
+      <splash-texture>Aircraft/dhc4/dhc4-splash.png</splash-texture>
+    </startup>
+
+    <model>
+      <path>Aircraft/dhc4/Models/dhc4.xml</path>
+      <shader-effect type="bool">false</shader-effect>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+    </model>
+
+    <submodels> 
+      <serviceable type="bool">true</serviceable>
+      <path>Aircraft/dhc4/Models/Effects/submodels.xml</path>
+    </submodels>
+
+    <sound>
+      <path>Aircraft/dhc4/Sounds/dhc4-sound.xml</path>
+    </sound>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic>
+        <int type="int" n="0">0</int>
+        <int type="int" n="1">0</int>
+        <int type="int" n="2">0</int>
+        <int type="int" n="3">0</int>
+        <int type="int" n="4">0</int>
+        <int type="int" n="5">0</int>
+        <float n="0" alias="/instrumentation/doors/crew/position-norm"/>
+        <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>
+      </generic>
+    </multiplay>
+
+    <flaps>
+      <setting>0.00</setting>
+      <setting>0.25</setting>
+      <setting>0.50</setting>
+      <setting>0.75</setting>
+      <setting>1.00</setting>
+    </flaps>
+
+    <help>
+      <title>C 160 Transall</title>
+      <key>
+        <name>d</name>
+        <desc>Open/Close crew door</desc>
+      </key>
+      <key>
+        <name>D</name>
+        <desc>Open/Close passanger bay</desc>
+      </key>
+    </help>
+
+    <menubar include="Dialogs/dhc4-menu.xml"/>
+
+  </sim>
+
+  <controls>
+    <engines>
+      <engine n="0">
+        <magnetos>0</magnetos>
+        <propeller-pitch>1</propeller-pitch>
+      </engine>
+      <engine n="1">
+        <magnetos>0</magnetos>
+        <propeller-pitch>1</propeller-pitch>
+      </engine>
+    </engines>
+    <gear>
+      <brake-parking> 1 </brake-parking>
+      <gear-down> true </gear-down>
+    </gear>
+  </controls>
+
+  <engines>
+    <engine n="0">
+      <engine-num type="int">0</engine-num>
+      <rpm archive="y">100</rpm>
+      <running>false</running>
+    </engine>
+    <engine n="1">
+      <engine-num type="int">1</engine-num>
+      <rpm archive="y">100</rpm>
+      <running>false</running>
+    </engine>
+  </engines>
+
+  <input>
+    <keyboard include="Nasal/dhc4-keyboard.xml"/>
+  </input>
+ 
+  <instrumentation>
+    <doors>
+      <crew>
+        <position-norm type="float">0</position-norm>
+      </crew>
+      <passenger>
+        <position-norm type="float">0</position-norm>
+      </passenger>
+    </doors>
+  </instrumentation>
+
+  <nasal>
+    <dhc4>
+      <file>Aircraft/dhc4/Nasal/doors.nas</file>
+      <file>Aircraft/dhc4/Nasal/liveries.nas</file>
+      <file>Aircraft/dhc4/Nasal/light.nas</file>
+    </dhc4>
+    <doors>
+      <file>Aircraft/dhc4/Nasal/doors.nas</file>
+    </doors>
+  </nasal>
+
+</PropertyList>
+

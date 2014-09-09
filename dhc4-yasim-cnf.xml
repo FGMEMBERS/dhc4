@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+************************************************************************
+De Havilland Canada DHC-4 Caribou
+December 2010 BARANGER Emmanuel
+************************************************************************
+-->
+
+<PropertyList include="dhc4-base.xml">
+
+  <sim>
+
+    <description>De Havilland Canada DHC-4 Caribou (YASim)</description>
+    <flight-model>yasim</flight-model>
+    <aero>dhc4-yasim</aero>
+
+  </sim>
+    
+</PropertyList>

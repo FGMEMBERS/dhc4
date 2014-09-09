@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- <PropertyList include="dhc4-jsbsim-cnf.xml"> -->
+<PropertyList include="dhc4-yasim-cnf.xml">
+
+  <sim>
+    <description>De Havilland Canada DHC-4 Caribou</description>
+    <author>BARANGER Emmanuel</author>
+  </sim>
+
+</PropertyList>
+
